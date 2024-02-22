@@ -1,7 +1,7 @@
 import EmptyLayoutVue from '@/layouts/EmptyLayout.vue';
 import { RouteRecordRaw } from 'vue-router';
 
-const Login = () => import('@/pages/Login.vue');
+const Login = () => import('@/pages/Login/IndexLogin.vue');
 
 export const authRoutes: Array<RouteRecordRaw> = [
   {

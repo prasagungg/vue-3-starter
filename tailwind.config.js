@@ -1,4 +1,5 @@
 const animate = require('tailwindcss-animate');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -19,6 +20,9 @@ module.exports = {
       screens: {
         '2xl': '1400px',
       },
+    },
+    fontFamily: {
+      sans: ['"Proxima Nova"', ...fontFamily.sans],
     },
     extend: {
       colors: {

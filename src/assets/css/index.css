@@ -71,6 +71,36 @@
 }
 
 @layer base {
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url('../font/ProximaNova-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url('../font/Proxima Nova Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url('../font/ProximaNova RegItalic.otf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url('../font/ProximaNova Bolditalic.otf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+@layer base {
   * {
     @apply border-border;
   }
