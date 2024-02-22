@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { LoginForm } from './components';
+</script>
 
 <template>
   <div class="grid grid-cols-[3fr_2fr]">
@@ -11,8 +13,8 @@
       />
       <img src="@/assets/images/login.svg" alt="logo-login" fetchpriority="high" class="h-80" />
     </div>
-    <div class="grid place-content-center px-5">
-      <h3 class="text-2xl font-bold">Bot Template</h3>
+    <div class="grid place-content-center max-w-xs mx-auto">
+      <LoginForm />
     </div>
   </div>
 </template>

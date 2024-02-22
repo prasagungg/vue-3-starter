@@ -1,0 +1,138 @@
+@layer utilities {
+  .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    mask-size: contain !important;
+    background-color: #302b27;
+    vertical-align: middle;
+  }
+  .icon-xs {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .icon-sm {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .icon-base {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .icon-lg {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .icon-xl {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .icon-2xl {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .icon-menu {
+    mask: url('../icon/menu.svg') no-repeat center;
+    -webkit-mask: url('../icon/menu.svg') no-repeat center;
+  }
+
+  .icon-chevron-left {
+    mask: url('../icon/chevron-left.svg') no-repeat center;
+    -webkit-mask: url('../icon/chevron-left.svg') no-repeat center;
+  }
+
+  .icon-chevron-right {
+    mask: url('../icon/chevron-right.svg') no-repeat center;
+    -webkit-mask: url('../icon/chevron-right.svg') no-repeat center;
+  }
+
+  .icon-chevron-up {
+    mask: url('../icon/chevron-up.svg') no-repeat center;
+    -webkit-mask: url('../icon/chevron-up.svg') no-repeat center;
+  }
+
+  .icon-chevron-down {
+    mask: url('../icon/chevron-down.svg') no-repeat center;
+    -webkit-mask: url('../icon/chevron-down.svg') no-repeat center;
+  }
+
+  .icon-eye {
+    mask: url('../icon/eye.svg') no-repeat center;
+    -webkit-mask: url('../icon/eye.svg') no-repeat center;
+  }
+
+  .icon-eye-off {
+    mask: url('../icon/eye-off.svg') no-repeat center;
+    -webkit-mask: url('../icon/eye-off.svg') no-repeat center;
+  }
+
+  .icon-repeat {
+    mask: url('../icon/repeat.svg') no-repeat center;
+    -webkit-mask: url('../icon/repeat.svg') no-repeat center;
+  }
+
+  .icon-plus-circle {
+    mask: url('../icon/plus-circle.svg') no-repeat center;
+    -webkit-mask: url('../icon/plus-circle.svg') no-repeat center;
+  }
+
+  .icon-fluent-send {
+    mask: url('../icon/fluent-send.svg') no-repeat center;
+    -webkit-mask: url('../icon/fluent-send.svg') no-repeat center;
+  }
+  .icon-monitor {
+    mask: url('../icon/monitor.svg') no-repeat center;
+    -webkit-mask: url('../icon/monitor.svg') no-repeat center;
+  }
+
+  .icon-download {
+    mask: url('../icon/download.svg') no-repeat center;
+    -webkit-mask: url('../icon/download.svg') no-repeat center;
+  }
+
+  .icon-calendar {
+    mask: url('../icon/calendar.svg') no-repeat center;
+    -webkit-mask: url('../icon/calendar.svg') no-repeat center;
+  }
+
+  .icon-setting {
+    mask: url('../icon/setting.svg') no-repeat center;
+    -webkit-mask: url('../icon/setting.svg') no-repeat center;
+  }
+
+  .icon-plus {
+    mask: url('../icon/plus.svg') no-repeat center;
+    -webkit-mask: url('../icon/plus.svg') no-repeat center;
+  }
+
+  .icon-x {
+    mask: url('../img/icon/x.svg') no-repeat center;
+    -webkit-mask: url('../img/icon/x.svg') no-repeat center;
+  }
+
+  .icon-image {
+    mask: url('../img/icon/image.svg') no-repeat center;
+    -webkit-mask: url('../img/icon/image.svg') no-repeat center;
+  }
+
+  .icon-rotate-cw {
+    mask: url('../img/icon/rotate-cw.svg') no-repeat center;
+    -webkit-mask: url('../img/icon/rotate-cw.svg') no-repeat center;
+  }
+
+  .icon-user {
+    mask: url('../img/icon/user.svg') no-repeat center;
+    -webkit-mask: url('../img/icon/user.svg') no-repeat center;
+  }
+
+  .icon-back {
+    mask: url('../img/icon/back.svg') no-repeat center;
+    -webkit-mask: url('../img/icon/back.svg') no-repeat center;
+  }
+}

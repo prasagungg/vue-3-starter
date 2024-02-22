@@ -1,15 +1,15 @@
-import EmptyLayoutVue from '@/layouts/EmptyLayout.vue';
+import { EmptyLayout } from '@/layouts';
 import { RouteRecordRaw } from 'vue-router';
 
-const Login = () => import('@/pages/Login/IndexLogin.vue');
+const IndexLogin = () => import('@/pages/auth/login/IndexLogin.vue');
 
 export const authRoutes: Array<RouteRecordRaw> = [
   {
     name: 'login',
     path: '/login',
-    component: Login,
+    component: IndexLogin,
     meta: {
-      layout: EmptyLayoutVue,
+      layout: EmptyLayout,
     },
   },
 ];
