@@ -27,6 +27,52 @@
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
+    --eggplant: #462b93;
+    --eggplant-darker: #3a247a;
+    --eggplant-soft: #edeaf5;
+
+    --sunflower: #ffd151;
+    --sunflower-darker: #d4ae43;
+    --sunflower-soft: #fffbee;
+
+    --veggies: #6bbf59;
+    --veggies-darker: #08a045;
+    --veggies-soft: #f1f9ef;
+
+    --tamarin: #ff7a00;
+    --tamarin-darker: #d46600;
+    --tamarin-soft: #fff2e6;
+
+    --aoi: #0065ff;
+    --aoi-darker: #0054d4;
+    --aoi-soft: #e6f0ff;
+
+    --flamingo: #ef476f;
+    --flamingo-darker: #c73b5c;
+    --flamingo-soft: #feedf1;
+
+    --neutral-black: #302b27;
+    --neutral-grey-dark: #6c6966;
+    --neutral-grey-hard: #a6a6a6;
+    --neutral-grey-medium: #cacaca;
+    --neutral-grey-soft: #dddddd;
+    --neutral-grey-so-soft: #efefef;
+
+    --alert: #ee3c2e;
+    --alert-soft: #feeceb;
+
+    --warning: #ffd151;
+    --warning-soft: #fffbee;
+
+    --information: #0065ff;
+    --information-soft: #e6f0ff;
+
+    --success: #6bbf59;
+    --success-soft: #f1f9ef;
+
+    --help: #462b93;
+    --help-soft: #edeaf5;
+
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
 

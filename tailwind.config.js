@@ -41,6 +41,64 @@ module.exports = {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
         },
+        eggplant: {
+          DEFAULT: 'var(--eggplant)',
+          darker: 'var(--eggplant-darker)',
+          soft: 'var(--eggplant-soft)',
+        },
+        sunflower: {
+          DEFAULT: 'var(--sunflower)',
+          darker: 'var(--sunflower-darker)',
+          soft: 'var(--sunflower-soft)',
+        },
+        veggies: {
+          DEFAULT: 'var(--veggies)',
+          darker: 'var(--veggies-darker)',
+          soft: 'var(--veggies-soft)',
+        },
+        tamarin: {
+          DEFAULT: 'var(--tamarin)',
+          darker: 'var(--tamarin-darker)',
+          soft: 'var(--tamarin-soft)',
+        },
+        aoi: {
+          DEFAULT: 'var(--aoi)',
+          darker: 'var(--aoi-darker)',
+          soft: 'var(--aoi-soft)',
+        },
+        flamingo: {
+          DEFAULT: 'var(--flamingo)',
+          darker: 'var(--flamingo-darker)',
+          soft: 'var(--flamingo-soft)',
+        },
+        neutral: {
+          DEFAULT: 'var(--neutral-black)',
+          'grey-dark': 'var(--neutral-grey-dark)',
+          'grey-hard': 'var(--neutral-grey-hard)',
+          'grey-medium': 'var(--neutral-grey-medium)',
+          'grey-soft': 'var(--neutral-grey-soft)',
+          'grey-so-soft': 'var(--neutral-grey-so-soft)',
+        },
+        alert: {
+          DEFAULT: 'var(--alert)',
+          soft: 'var(--alert-soft)',
+        },
+        warning: {
+          DEFAULT: 'var(--warning)',
+          soft: 'var(--warning-soft)',
+        },
+        information: {
+          DEFAULT: 'var(--information)',
+          soft: 'var(--information-soft)',
+        },
+        success: {
+          DEFAULT: 'var(--success)',
+          soft: 'var(--success-soft)',
+        },
+        help: {
+          DEFAULT: 'var(--help)',
+          soft: 'var(--help-soft)',
+        },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',
