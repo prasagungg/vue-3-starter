@@ -1,8 +1,7 @@
-import { MainLayout, AuthLayout } from '@/layouts';
+import { MainLayout } from '@/layouts';
 import { RouteRecordRaw } from 'vue-router';
 
 const Dashboard = () => import('@/modules/dashboard/pages/Dashboard.vue');
-const TestRendi = () => import('@/modules/error/TestRendi.vue');
 
 export const dashboardRoutes: Array<RouteRecordRaw> = [
   {
