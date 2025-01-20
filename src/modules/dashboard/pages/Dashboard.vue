@@ -1,5 +1,5 @@
 <script lang="ts" setup></script>
 
 <template>
-  <p>oke</p>
+  <p>Ini dashboard</p>
 </template>
