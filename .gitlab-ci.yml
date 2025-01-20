@@ -1,0 +1,72 @@
+stages:
+  - compile
+  - build
+  - deploy
+
+variables:
+  DOCKER_IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
+
+Compile NPM:
+  stage: compile
+  image: node:18-alpine
+  cache:
+    key: "$CI_BUILD_REF_NAME"
+    paths:
+      - node_modules/
+  before_script:
+    - node --version
+    - npm --version
+    - npm rebuild node-sass
+    - npm install
+  script:
+    - >
+      if [ "$CI_COMMIT_REF_NAME" == "development" ]; then
+       npm run build:development
+      elif [ "$CI_COMMIT_REF_NAME" == "staging" ]; then
+       npm run build:staging
+      else
+        npm run build:production
+      fi
+  artifacts:
+    name: "dist-$CI_COMMIT_REF_NAME"
+    paths:
+      - dist/
+    expire_in: 1 hour
+  only:
+    - development
+    - staging
+    - tags
+  tags:
+    - docker
+
+Build Container:
+  stage: build
+  image: docker:20.10.5
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build --no-cache -t $DOCKER_IMAGE --build-arg DIST_FOLDER=dist -f deploy/Dockerfile .
+    - docker push $DOCKER_IMAGE
+  only:
+    - development
+    - staging
+    - tags
+  tags:
+    - docker
+
+Deploy DevStaging:
+  stage: deploy
+  script:
+    - >
+      if [ "$CI_COMMIT_REF_NAME" == "development" ]; then
+        kubectl set image deployment/ss-jepara ss-jepara=$DOCKER_IMAGE -n development
+        kubectl rollout restart deployment/ss-jepara -n development
+      else
+        kubectl set image deployment/ss-jepara ss-jepara=$DOCKER_IMAGE -n staging
+        kubectl rollout restart deployment/ss-jepara -n staging
+      fi
+  only:
+    - development
+    - staging
+  tags:
+    - bkwh-runner
