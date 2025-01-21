@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { MoonIcon, SunIcon } from 'lucide-vue-next';
+import { CheckIcon, MoonIcon, SunIcon } from 'lucide-vue-next';
 import { Button } from '../ui/button';
 import {
   DropdownMenu,
@@ -7,6 +7,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu';
+import { useThemeStore } from '@/stores';
+import { cn } from '@/utils';
+import { computed } from 'vue';
+
+const themeStore = useThemeStore();
+
+const theme = computed(() => themeStore.theme);
 </script>
 <template>
   <DropdownMenu>
@@ -22,9 +29,15 @@ import {
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent align="end">
-      <DropdownMenuItem> Light </DropdownMenuItem>
-      <DropdownMenuItem> Dark </DropdownMenuItem>
-      <DropdownMenuItem> System </DropdownMenuItem>
+      <DropdownMenuItem @click="themeStore.setTheme('light')">
+        Light <CheckIcon :class="cn('ml-auto', theme !== 'light' && 'hidden')" />
+      </DropdownMenuItem>
+      <DropdownMenuItem @click="themeStore.setTheme('dark')">
+        Dark <CheckIcon :class="cn('ml-auto', theme !== 'dark' && 'hidden')" />
+      </DropdownMenuItem>
+      <DropdownMenuItem @click="themeStore.setTheme('system')">
+        System <CheckIcon :class="cn('ml-auto', theme !== 'system' && 'hidden')"
+      /></DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
 </template>
