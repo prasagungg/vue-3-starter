@@ -31,7 +31,7 @@ function toggleCollapsible() {
     <SidebarMenuItem>
       <CollapsibleTrigger as-child @click="toggleCollapsible">
         <SidebarMenuButton :tooltip="item.title">
-          <item.icon v-if="item.icon" />
+          <component :is="item.icon" v-if="item.icon" />
           <span>{{ item.title }}</span>
           <Badge class="text-xs rounded-full px-1 py-0" v-if="item.badge">{{ item.badge }}</Badge>
           <ChevronRight
@@ -47,10 +47,10 @@ function toggleCollapsible() {
           <SidebarMenuSubItem v-for="nav in item.items" :key="nav.title">
             <SidebarMenuSubButton asChild :isActive="checkIsActive(href, nav)">
               <RouterLink :to="nav.url" @click="setOpenMobile(false)">
-                <item.icon v-if="item.icon" />
-                <span>{{ item.title }}</span>
-                <Badge class="text-xs rounded-full px-1 py-0" v-if="item.badge">{{
-                  item.badge
+                <component :is="nav.icon" v-if="nav.icon" />
+                <span>{{ nav.title }}</span>
+                <Badge class="text-xs rounded-full px-1 py-0" v-if="nav.badge">{{
+                  nav.badge
                 }}</Badge>
               </RouterLink>
             </SidebarMenuSubButton>
