@@ -1,12 +1,16 @@
 <script lang="ts" setup>
 import { SearchIcon } from 'lucide-vue-next';
 import { Button } from '../ui/button';
+import { useSeachStore } from '@/stores';
+
+const searchStore = useSeachStore();
 </script>
 
 <template>
   <Button
     variant="outline"
     class="relative h-8 w-full flex-1 md:flex-none justify-start rounded-md bg-muted/25 hover:bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-56 xl:w-64"
+    @click="searchStore.toggleSearch(true)"
   >
     <SearchIcon class="absolute left-1.5 top-1/2 -translate-y-1/2" />
     <span class="ml-3">Cari...</span>

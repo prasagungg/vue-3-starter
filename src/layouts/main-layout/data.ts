@@ -24,17 +24,17 @@ export const sidebarData: SidebarData = {
           icon: LayoutPanelLeft,
         },
         {
-          title: 'Dashboard',
+          title: 'Dashboard 2',
           url: '/test',
           icon: LayoutPanelLeft,
         },
         {
-          title: 'Dashboard',
+          title: 'Dashboard 3',
           url: '/test2',
           icon: LayoutPanelLeft,
         },
         {
-          title: 'Dashboard',
+          title: 'Dashboard 4',
           url: '/test3',
           icon: LayoutPanelLeft,
         },

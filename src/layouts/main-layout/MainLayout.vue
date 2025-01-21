@@ -1,6 +1,26 @@
 <script lang="ts" setup>
 import { SidebarProvider } from '@/components/ui/sidebar';
 import { AppHeader, AppSidebar } from '.';
+import { CommandMenu } from '@/components/command-menu';
+import { useSeachStore } from '@/stores';
+import { onMounted, onUnmounted } from 'vue';
+
+const searchStore = useSeachStore();
+
+const handleKeydown = (event: KeyboardEvent) => {
+  if (event.ctrlKey && event.key === 'k') {
+    event.preventDefault();
+    searchStore.open = !searchStore.open;
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('keydown', handleKeydown);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeydown);
+});
 </script>
 
 <template>
@@ -15,5 +35,6 @@ import { AppHeader, AppSidebar } from '.';
         <slot />
       </main>
     </div>
+    <CommandMenu v-model:open="searchStore.open" />
   </SidebarProvider>
 </template>
