@@ -19,9 +19,7 @@ src
 |
 +-- libs                      # third-party/custom libraries configuration
 |
-+-- locales                   # locales
-|
-+-- pages                     # page components
++-- modules                   # modules components
 |
 +-- routes                    # routes
 |

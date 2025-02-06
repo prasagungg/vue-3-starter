@@ -7,7 +7,7 @@ There is no need to keep all of your state in a single centralized store. There 
 This is the state that is only needed by a component and is not meant to shared to be shared to anywhere else. For this type of state, you only need:
 
 - [ref()](https://vuejs.org/api/reactivity-core#ref) - for simple state
-- [reactive()](https://vuejs.org/api/reactivity-core#reactive) for more complext state
+- [reactive()](https://vuejs.org/api/reactivity-core#reactive) for more complex state
 
 ## Application State
 
@@ -27,7 +27,7 @@ This is a state that helps in managing users inputs in a form. Handling a form w
 
 Formik is library for managing form state. Instead of having multiple `ref()`, we could have one form state that store all input values. Vee Validate also has many usefull feature e.g. validation.
 
-[Form Example](../src/pages/auth/login/components/LoginForm.vue)
+[Form Example](../src/modules/auth/components/LoginForm.vue)
 
 ## Server Cache State
 
